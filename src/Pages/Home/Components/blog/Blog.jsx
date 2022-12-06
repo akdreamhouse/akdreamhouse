@@ -39,7 +39,7 @@ const Blog = (props) => (
         <Article
           imgUrl={blog04}
           date="Nov 19, 2022"
-          text="Colorful Office Spaces. Let AK Architect's exlore how it is?"
+          text="Colorful Office Spaces. Let AK Dream House exlore how it is?"
         />
         <Article
           imgUrl={blog05}

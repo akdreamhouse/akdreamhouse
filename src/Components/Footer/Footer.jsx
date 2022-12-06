@@ -38,7 +38,7 @@ const Footer = () => (
         <div className="ak__footer-links_div">
           <h4>Get in touch</h4>
           <p>
-            AK Architect's,
+            AK Dream House,
             <br /> <br />
             128, Madhuban Colony, Behind Reliance Pertol Pump, AB Road, Dewas -
             455001
@@ -49,7 +49,7 @@ const Footer = () => (
       </div>
 
       <div className="ak__footer-copyright">
-        <p>@{new Date().getFullYear()} AK ARCHITECT'S. All rights reserved.</p>
+        <p>@{new Date().getFullYear()} AK Dream House. All rights reserved.</p>
       </div>
     </div>
   </div>
