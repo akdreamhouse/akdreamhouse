@@ -40,11 +40,10 @@ const Footer = () => (
           <p>
             AK Dream House,
             <br /> <br />
-            128, Madhuban Colony, Behind Reliance Pertol Pump, AB Road, Dewas -
-            455001
+            128, Astaya Complex, AB Road, Madhya Pradesh, Dewas, India, 455001
           </p>
-          <p>+91 8085997612</p>
-          <p>info@akarchitect.com</p>
+          <p>+91 9770940377</p>
+          <p>info@akdreamhouse.com</p>
         </div>
       </div>
 
