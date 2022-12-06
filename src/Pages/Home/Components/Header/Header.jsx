@@ -9,7 +9,7 @@ const Header = (props) => (
     <div className="ak__header section__padding" id="home">
       <div className="ak__header-content">
         <h1 className="gradient__text">
-          Let&apos;s Build Something Amazing with AK Architect&apos;s
+          Let&apos;s Build Something Amazing with AK Dream House
         </h1>
         <p>
           We are AK Architects whose professional turns building design into

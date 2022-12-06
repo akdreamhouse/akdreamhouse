@@ -40,7 +40,7 @@ const Footer = () => (
           <p>
             AK Dream House,
             <br /> <br />
-            128, Astaya Complex, AB Road, Madhya Pradesh, Dewas, India, 455001
+            128, Amrit Complex, AB Road, Madhya Pradesh, Dewas, India, 455001
           </p>
           <p>+91 9770940377</p>
           <p>info@akdreamhouse.com</p>
