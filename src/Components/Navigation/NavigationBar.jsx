@@ -29,7 +29,6 @@ function NavigationBar() {
     >
       <div className="navigation-container">
         <div className="navigation-container-logo">
-          {/* <img src="/images/svgs/ak_logo.svg" alt="ak_logo" onClick={() => navigate("/")}/> */}
           <h2 onClick={() => navigate("/")}>AK Dream House</h2>
         </div>
         <div className="hamburger" onClick={handleOpenMenuClick}>

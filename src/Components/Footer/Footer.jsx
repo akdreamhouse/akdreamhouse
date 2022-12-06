@@ -14,7 +14,7 @@ const Footer = () => (
 
       <div className="ak__footer-links">
         <div className="ak__footer-links_logo">
-          <img src="/images/svgs/ak_logo.svg" alt="ak_logo" />
+        <h2 className="gradient__text">AK Dream House</h2>
           <p>Give Your Dreams A Shape Of Reality.</p>
         </div>
         <div className="ak__footer-links_div">

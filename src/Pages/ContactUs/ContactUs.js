@@ -61,14 +61,13 @@ function ContactUs() {
         <div className="contact-us-page-map-left">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.273304234856!2d76.06891761540595!3d22.97697532379547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396317245515a555%3A0x85ea6472cb35f631!2sThe%20House%20Creation!5e0!3m2!1sen!2sin!4v1668777206444!5m2!1sen!2sin"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
             title="myFrame"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
         <div className="contact-us-page-map-right">
-          <img src="images/logo-ak.jpeg" alt="brand logo" />
           <h2 className="gradient__text">A.K. Architect</h2>
           <div className="contact-us-page-map-right-contact-info">
             <p>
