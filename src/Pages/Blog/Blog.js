@@ -5,7 +5,7 @@ import Loader from "../../Components/Loader/Loader";
 
 function BlogPage() {
   useEffect(() => {
-    document.title = "A.K. Architect - Blog";
+    document.title = "A.K. Dream House - Blog";
   }, []);
 
   return (

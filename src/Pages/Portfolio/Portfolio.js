@@ -6,7 +6,7 @@ import "./Portfolio.scss";
 
 function Portfolio() {
   useEffect(() => {
-    document.title = "A.K. Architect - Portfolio";
+    document.title = "A.K. Dream House - Portfolio";
   }, []);
 
   return (

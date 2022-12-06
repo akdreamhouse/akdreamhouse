@@ -41,7 +41,7 @@ function NavigationBar() {
           onClick={mobileNavigationClose}
         >
           <div className="navigation-mobile-logo">
-            <h2>A.K. Architect</h2>
+            <h2>A.K. Dream House</h2>
           </div>
           <li className="header-link">
             <Link to="/services">Services</Link>

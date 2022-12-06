@@ -10,7 +10,7 @@ function ContactUs() {
   const [isOpenContactFormModel, setIsOpenContactFormModel] = useState(false);
 
   useEffect(() => {
-    document.title = "A.K. Architect - Contact us";
+    document.title = "A.K. Dream House - Contact us";
   }, []);
 
   return (
@@ -68,7 +68,7 @@ function ContactUs() {
           ></iframe>
         </div>
         <div className="contact-us-page-map-right">
-          <h2 className="gradient__text">A.K. Architect</h2>
+          <h2 className="gradient__text">A.K. Dream House</h2>
           <div className="contact-us-page-map-right-contact-info">
             <p>
               <i className="fas fa-location-arrow my-address"></i>

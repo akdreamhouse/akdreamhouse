@@ -19,7 +19,7 @@ function Home() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "A.K. Architect - Home";
+    document.title = "A.K. Dream House - Home";
   }, []);
 
   const handleGetStarted = () => {

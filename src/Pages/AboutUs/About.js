@@ -8,7 +8,7 @@ function About() {
   //modules
   const navigate = useNavigate();
   useEffect(() => {
-    document.title = "A.K. Architect - About us";
+    document.title = "A.K. Dream House - About us";
   }, []);
   return (
     <div className="About">

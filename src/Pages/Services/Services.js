@@ -7,7 +7,7 @@ import "./Services.scss";
 function Services() {
 
   useEffect(() => {
-    document.title = "A.K. Architect - Services";
+    document.title = "A.K. Dream House - Services";
   }, []);
 
   return (
