@@ -44,6 +44,9 @@ function NavigationBar() {
             <h2>A.K. Dream House</h2>
           </div>
           <li className="header-link">
+            <Link to="/">Home</Link>
+          </li>
+          <li className="header-link">
             <Link to="/services">Services</Link>
           </li>
           <li className="header-link">
@@ -55,9 +58,9 @@ function NavigationBar() {
           <li className="header-link">
             <Link to="/conact-us">Contact us</Link>
           </li>
-          <li className={`header-link ${tabNavFlag && "open"}`}>
+          {/* <li className={`header-link ${tabNavFlag && "open"}`}>
             <Link to="/blog">Blog</Link>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>
