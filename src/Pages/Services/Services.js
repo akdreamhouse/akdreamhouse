@@ -4,7 +4,12 @@ import "react-multi-carousel/lib/styles.css";
 
 // manual modules
 import "./Services.scss";
-import blog01 from "../../assets/blog02.jpg";
+import blog01 from "../../assets/blog01.jpg";
+import blog02 from "../../assets/blog02.jpg";
+import blog03 from "../../assets/blog03.jpeg";
+import blog04 from "../../assets/blog04.jpg";
+import blog05 from "../../assets/blog05.jpg";
+import blog06 from "../../assets/blog02.jpg";
 import { Link } from "react-router-dom";
 import Features from "../Home/Components/features/Features";
 import CTA from "../../Components/cta/CTA";
@@ -66,35 +71,35 @@ function Services() {
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
-              <img src={blog01} alt="card-img" />
+              <img src={blog02} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Interior Design</p>
                 <Link to="/">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
-              <img src={blog01} alt="card-img" />
+              <img src={blog03} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Landscape Design</p>
                 <Link to="/">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
-              <img src={blog01} alt="card-img" />
+              <img src={blog04} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">3D Elevation</p>
                 <Link to="/">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
-              <img src={blog01} alt="card-img" />
+              <img src={blog05} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Floor Planning</p>
                 <Link to="/">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
-              <img src={blog01} alt="card-img" />
+              <img src={blog06} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Structure Drawing</p>
                 <Link to="/">learn more...</Link>
