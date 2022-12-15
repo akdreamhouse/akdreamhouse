@@ -22,7 +22,7 @@ function ContactUs() {
           <p>
             Please let us know if you have further questions/discussion.
             <br />
-           <span>Feel free to contact us.</span>
+            <span>Feel free to contact us.</span>
           </p>
           <button
             className="get-in-touch"
@@ -73,7 +73,7 @@ function ContactUs() {
             <p>
               <i className="fas fa-location-arrow my-address"></i>
               <span>
-                128 madhuban colony (AB road) behind Reliance pump , Dewas M.P.
+                128, Amrit Complex, AB Road, Madhya Pradesh, Dewas, India
                 <br />
                 Pin code : 455001
               </span>
