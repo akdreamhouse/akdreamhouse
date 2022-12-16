@@ -157,7 +157,8 @@
         }
 
         @media screen and (max-width: 554px) {
-          margin: 15px 0;
+          margin: 15px auto;
+          width: 85%;
         }
 
         img {
@@ -168,7 +169,7 @@
           transition: all 0.4s ease-out;
         }
 
-        &:hover img{
+        &:hover img {
           transform: scale(1.1);
         }
 
@@ -204,7 +205,7 @@
           p {
             border: none;
             text-decoration: none;
-            font-size: 32px;
+            font-size: 42px;
             color: white;
 
             @media (max-width: 1024px) {
@@ -226,6 +227,10 @@
             color: whitesmoke;
             transition: all 0.3s ease-in-out;
 
+            @media screen and (max-width: 554px) {
+              padding: 5px 10px;
+            }
+
             &:hover {
               background-color: #34036c;
               padding: 10px 25px;
@@ -236,8 +241,51 @@
     }
   }
 
-  &-projects{
+  &-projects {
     text-align: center;
-    
+    padding: 60px 0;
+
+    &-carousel {
+      width: 80%;
+      margin: 0 auto;
+      padding: 60px 0;
+      color: #fff;
+      margin-top: 100px;
+      box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.486);
+
+      @media (max-width: 768px) {
+        width: 98%;
+      }
+
+      &-item {
+        margin: 10px 40px;
+        border-radius: 7px;
+        overflow: hidden;
+        box-sizing: border-box;
+        max-height: 350px;
+        user-select: none;
+
+        box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.486);
+        img {
+          width: 100%;
+          height: 350px;
+          object-fit: cover;
+          object-position: center;
+
+          @media screen and (max-width: 1024px) {
+          }
+        }
+      }
+
+      &-click-to-open {
+        color: grey;
+        padding-bottom: 15px;
+
+        h4 {
+          text-transform: uppercase;
+          font-size: 12px !important;
+        }
+      }
+    }
   }
 }

@@ -13,6 +13,8 @@ import blog06 from "../../assets/blog02.jpg";
 import { Link } from "react-router-dom";
 import Features from "../Home/Components/features/Features";
 import CTA from "../../Components/cta/CTA";
+import Gallery from "../../Components/Gallery/Gallery";
+import { servicesPopUpImages } from "./constants";
 
 const responsive = {
   superLargeDesktop: {
@@ -112,21 +114,29 @@ function Services() {
       <Features />
       <CTA />
 
-      {/* <div className="Services-projects">
+      <div className="Services-projects">
         <h2 className="gradient__text">OUR RECENT PROJECTS</h2>
-        <div>
+        <div className="Services-projects-carousel">
+          <div className="Services-projects-carousel-click-to-open">
+            <h4>click image to open project images</h4>
+          </div>
           <Carousel
+            autoPlay={true}
+            autoPlaySpeed={2000}
             transitionDuration={500}
             infinite={true}
             responsive={responsive}
           >
-            <div>Item 1</div>
-            <div>Item 2</div>
-            <div>Item 3</div>
-            <div>Item 4</div>
+            {servicesPopUpImages.map((item, idx) => {
+              return (
+                <div key={idx} className="Services-projects-carousel-item">
+                  <Gallery images={item.images} />
+                </div>
+              );
+            })}
           </Carousel>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 }
