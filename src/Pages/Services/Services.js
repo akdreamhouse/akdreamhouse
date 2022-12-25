@@ -42,7 +42,7 @@ function Services() {
   }, []);
 
   const letGoHandlar = () => {
-    window.scroll({ top: 700, behavior: "smooth" });
+    window.scroll({ top: 640, behavior: "smooth" });
   };
 
   return (
@@ -69,42 +69,42 @@ function Services() {
               <img src={blog01} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Architectural Design</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
               <img src={blog02} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Interior Design</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
               <img src={blog03} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Landscape Design</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
               <img src={blog04} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">3D Elevation</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
               <img src={blog05} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Floor Planning</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
             <div className="Services-cards-section-cards-cardBox">
               <img src={blog06} alt="card-img" />
               <div className="Services-cards-section-cards-cardBox-hoverContent">
                 <p className="gradient__text">Structure Drawing</p>
-                <Link to="/">learn more...</Link>
+                <Link to="/services/akdream-house">learn more...</Link>
               </div>
             </div>
           </div>

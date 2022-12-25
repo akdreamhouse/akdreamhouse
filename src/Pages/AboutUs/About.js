@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import "./About.scss";
 
 function About() {
-  //modules
   const navigate = useNavigate();
   useEffect(() => {
     document.title = "A.K. Dream House - About us";
