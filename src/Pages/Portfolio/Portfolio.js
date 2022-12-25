@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { recentPortfolioData } from "./constants";
+import { portfolioProjects } from "../../assets/portfolios";
 
 // manual modules
 import "./Portfolio.scss";
@@ -36,16 +36,19 @@ function Portfolio() {
       <div className="Portfolio-cards-section ak__ak mb-5">
         <h2 className="gradient__text text-center">OUR RECENT PORTFOLIO's</h2>
         <div className="inner-portfolio">
-          {recentPortfolioData?.map((item, idx) => {
+          {portfolioProjects?.map((item, idx) => {
             return (
               <div className="Portfolio-cards-section-portfolio" key={idx}>
-                <img src={item?.imgSrc} alt={item?.portfolioTitle} />
+                <img
+                  src={item?.projectImages[0].imageLink}
+                  alt={item?.portfolioTitle}
+                />
                 <div className="Portfolio-cards-section-portfolio-hover">
-                  <h4>{item?.portfolioTitle}</h4>
+                  <h4>{item?.projectName}</h4>
                   <button
                     className="zoom-button"
                     onClick={() => {
-                      navigate(`/portfolio/details/${item?.id}`);
+                      navigate(`/portfolio/details?portfolio=${item?.projectID}`);
                     }}
                   >
                     learn more...

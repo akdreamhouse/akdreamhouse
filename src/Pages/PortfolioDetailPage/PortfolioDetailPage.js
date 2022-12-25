@@ -1,15 +1,10 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import {
-  blog01,
-  blog02,
-  blog03,
-  blog04,
-  blog05,
-} from "../Home/Components/blog/imports";
+import { useLocation } from "react-router-dom";
 
 import "./PortfolioDetailPage.scss";
+import { portfolioProjects } from "../../assets/portfolios";
 
 const responsive = {
   superLargeDesktop: {
@@ -30,7 +25,20 @@ const responsive = {
   },
 };
 
-function PortfolioDetailPage() {
+function PortfolioDetailPage(props) {
+  const search = useLocation().search;
+  const id = new URLSearchParams(search).get("portfolio");
+  const [portfolio, setPortfolio] = useState([]);
+
+  useEffect(() => {
+    const fileredPortfolio = portfolioProjects.filter(
+      (item) => item.projectID === Number(id)
+    );
+    setPortfolio(fileredPortfolio[0]);
+  }, [id]);
+
+  console.log(portfolio);
+
   return (
     <div className="PortfolioDetailPage">
       <div className="PortfolioDetailPage-container">
@@ -41,48 +49,53 @@ function PortfolioDetailPage() {
             <ul className="PortfolioDetailPage-container-details-left-list">
               <li>
                 <b>
-                  TITLE :-<span> AK Dream House </span>
+                  TITLE :-<span> {portfolio?.projectName} </span>
                 </b>
               </li>
               <li>
                 <b title="AK Dream House">
-                  PROJECT ONWER :- <span> dr. Deep Singh Raj </span>
+                  PROJECT ONWER :- <span> {portfolio?.projectOnwer}</span>
                 </b>
               </li>
               <li>
                 <b>
-                  PROJECT CATEGORY :- <span> Residential </span>
+                  PROJECT CATEGORY :-
+                  <span> {portfolio?.projectCategory} </span>
                 </b>
               </li>
               <li>
                 <b>
-                  PROJECT AREA SIZE :- <span> 70*50 Sq Ft </span>
+                  PROJECT AREA SIZE :-
+                  <span> {portfolio?.projectAreaSize}</span>
                 </b>
               </li>
               <li>
                 <b>
-                  STATUS :- <span> Done </span>
+                  STATUS :- <span> {portfolio?.projectStatus} </span>
                 </b>
               </li>
               <li>
                 <b>
-                  LOCATION :- <span> Indore MP India </span>
+                  LOCATION :- <span>{portfolio?.projectLocation} </span>
                 </b>
               </li>
               <li>
                 <b>
-                  PROJECT START DATE :- <span> 14-April, 2020 </span>
+                  PROJECT START DATE :-{" "}
+                  <span> {portfolio?.projectStartDate}</span>
                 </b>
               </li>
               <li>
                 <b>
-                  PROJECT END DATE :- <span>20-January, 2021</span>
+                  PROJECT END DATE :- <span>{portfolio?.projectEndDate}</span>
                 </b>
               </li>
               <li>
                 <b>
                   WEBSITE :-{" "}
-                  <a href="https://akdreamhouse.com">akdreamhouses.com</a>
+                  <a href={portfolio?.projectWebsite}>
+                    {portfolio?.projectWebsite}
+                  </a>
                 </b>
               </li>
             </ul>
@@ -90,45 +103,34 @@ function PortfolioDetailPage() {
             <div className="my-3">
               <h2>Project's Social Media </h2>
               <span className="social-icons">
-                <a href="/" target="_blank">
-                  <img src="images/icons/facebook.png" alt="facebook" />
-                </a>
-                <a href="/" target="_blank">
-                  <img src="images/icons/instagram.png" alt="insta" />
-                </a>
-                <a href="/" target="_blank">
-                  <img src="images/icons/linkdin.png" alt="linkdin" />
-                </a>
-                <a href="/" target="_blank">
-                  <img src="images/icons/twitter.png" alt="twitter" />
-                </a>
-                <a href="/" target="_blank">
-                  <img src="images/icons/youtube.png" alt="youtube" />
-                </a>
+                {portfolio.projectSocialMediaLinks &&
+                  portfolio?.projectSocialMediaLinks.map((item, idx) => {
+                    return (
+                      <a href="/" target="_blank">
+                        <img
+                          src={item?.socialIcon}
+                          alt={item?.sociaMediaName}
+                        />
+                      </a>
+                    );
+                  })}
               </span>
             </div>
           </div>
           <div className="PortfolioDetailPage-container-details-right">
-            <Carousel
-              autoPlay={true}
-              autoPlaySpeed={2000}
-              transitionDuration={1000}
-              infinite={true}
-              responsive={responsive}
-            >
-              <img src={blog01} alt="dfd" />
-              <img src={blog02} alt="dfd" />
-              <img src={blog03} alt="dfd" />
-              <img src={blog04} alt="dfd" />
-              <img src={blog05} alt="dfd" />
-              <img src={blog03} alt="dfd" />
-              <img src={blog01} alt="dfd" />
-              <img src={blog04} alt="dfd" />
-              <img src={blog01} alt="dfd" />
-              <img src={blog02} alt="dfd" />
-              <img src={blog03} alt="dfd" />
-              <img src={blog05} alt="dfd" />
-            </Carousel>
+            {portfolio?.projectImages && (
+              <Carousel
+                autoPlay={true}
+                autoPlaySpeed={2000}
+                transitionDuration={1000}
+                infinite={true}
+                responsive={responsive}
+              >
+                {portfolio?.projectImages.map((item) => {
+                  return <img src={item?.imageLink} alt="dfd" />;
+                })}
+              </Carousel>
+            )}
           </div>
         </div>
       </div>
