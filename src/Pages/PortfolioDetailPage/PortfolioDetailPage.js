@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 
 import "./PortfolioDetailPage.scss";
 import { portfolioProjects } from "../../assets/portfolios";
+import Loader from "../../Components/Loader/Loader";
 
 const responsive = {
   superLargeDesktop: {
@@ -25,10 +26,11 @@ const responsive = {
   },
 };
 
-function PortfolioDetailPage(props) {
+function PortfolioDetailPage() {
   const search = useLocation().search;
   const id = new URLSearchParams(search).get("portfolio");
   const [portfolio, setPortfolio] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fileredPortfolio = portfolioProjects.filter(
@@ -37,7 +39,14 @@ function PortfolioDetailPage(props) {
     setPortfolio(fileredPortfolio[0]);
   }, [id]);
 
-  console.log(portfolio);
+  setTimeout(() => {
+    if (!portfolio) navigate("/portfolio");
+    console.log("ddd", portfolio);
+  }, [2000]);
+
+  if (!portfolio) {
+    return <Loader />;
+  }
 
   return (
     <div className="PortfolioDetailPage">
@@ -106,7 +115,7 @@ function PortfolioDetailPage(props) {
                 {portfolio.projectSocialMediaLinks &&
                   portfolio?.projectSocialMediaLinks.map((item, idx) => {
                     return (
-                      <a href="/" target="_blank">
+                      <a href="/" target="_blank" key={idx}>
                         <img
                           src={item?.socialIcon}
                           alt={item?.sociaMediaName}
@@ -126,8 +135,8 @@ function PortfolioDetailPage(props) {
                 infinite={true}
                 responsive={responsive}
               >
-                {portfolio?.projectImages.map((item) => {
-                  return <img src={item?.imageLink} alt="dfd" />;
+                {portfolio?.projectImages.map((item, idx) => {
+                  return <img key={idx} src={item?.imageLink} alt="dfd" />;
                 })}
               </Carousel>
             )}
