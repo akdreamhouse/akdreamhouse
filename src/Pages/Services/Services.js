@@ -49,7 +49,7 @@ function Services() {
     <div className="Services">
       <div className="Services-header">
         <h1 className="gradient__text">Our Services</h1>
-        <h3>possibilities are beyond the imagination...</h3>
+        <h3>Possibilities are beyond the imagination...</h3>
         <p>
           Please view our portfolio of recent work, or contact us and discuss
           your project.

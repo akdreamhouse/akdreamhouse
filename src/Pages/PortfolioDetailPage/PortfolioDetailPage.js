@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 import "./PortfolioDetailPage.scss";
 import { portfolioProjects } from "../../assets/portfolios";
@@ -110,7 +110,9 @@ function PortfolioDetailPage() {
             </ul>
 
             <div className="my-3">
-              <h2>Project's Social Media </h2>
+              {portfolio?.projectSocialMediaLinks && (
+                <h2>Project's Social Media </h2>
+              )}
               <span className="social-icons">
                 {portfolio.projectSocialMediaLinks &&
                   portfolio?.projectSocialMediaLinks.map((item, idx) => {

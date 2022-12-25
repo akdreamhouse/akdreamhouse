@@ -12,11 +12,6 @@ function Loader() {
         <div className="loader-isometric-box"></div>
         <div className="loader-isometric-box"></div>
       </div>
-
-      <div className="comming-soon">
-        <h1>Comming soon</h1>
-        <span>...</span>
-      </div>
     </div>
   );
 }

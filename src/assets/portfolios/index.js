@@ -1,3 +1,4 @@
+import blog01 from "../../assets/blog01.jpg";
 import blog02 from "../../assets/blog02.jpg";
 import {
   facebookIcon,
@@ -32,6 +33,33 @@ export const portfolioProjects = [
     projectImages: [
       {
         imageLink: blog02,
+      },
+    ],
+  },
+  {
+    projectID: 2,
+    projectName: "Amrit Complex",
+    projectOnwer: "Ak Astaya",
+    projectCategory: "Residential",
+    projectAreaSize: "25*50 Sq Ft",
+    projectStatus: "Progess",
+    projectLocation: "Dewas MP India",
+    projectStartDate: "10-June, 2022",
+    projectEndDate: "",
+    projectWebsite: "",
+    projectSocialMediaLinks: [
+      { socialMediaName: "facebook", socialIcon: facebookIcon, socialLink: "" },
+      {
+        socialMediaName: "instagram",
+        socialIcon: instaGramIcon,
+      },
+      { socialMediaName: "linkdin", socialIcon: linkdinIcon },
+      { socialMediaName: "twitter", socialIcon: twitterIcon },
+      { socialMediaName: "youTube", socialIcon: youTubeIcon },
+    ],
+    projectImages: [
+      {
+        imageLink: blog01,
       },
     ],
   },
