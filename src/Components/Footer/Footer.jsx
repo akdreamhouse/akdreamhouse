@@ -42,7 +42,7 @@ const Footer = () => (
             <br /> <br />
             128, Amrit Complex, AB Road, Madhya Pradesh, Dewas, India, 455001
           </p>
-          <p>+91 9770940377</p>
+          <p>+91-8889900387</p>
           <p>info@akdreamhouse.com</p>
         </div>
       </div>

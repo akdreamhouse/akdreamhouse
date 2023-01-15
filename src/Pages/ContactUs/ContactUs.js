@@ -43,13 +43,13 @@ function ContactUs() {
           <h4>Address</h4>
           <span> Dewas M.P.</span>
         </a>
-        <a href="tel:9926324562" className="contact-us-page-contacts-box">
+        <a href="tel:8889900387" className="contact-us-page-contacts-box">
           <i className="fas fa-phone-volume"></i>
           <h4>Phone</h4>
-          <span>07271-55658</span>
+          <span>+91 889900387</span>
         </a>
         <a
-          href="mailto:contact@akarchitect.com"
+          href="mailto:akdreamhousecare@gmail.com"
           className="contact-us-page-contacts-box"
         >
           <i className="fas fa-envelope-open-text"></i>
