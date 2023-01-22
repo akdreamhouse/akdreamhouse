@@ -12,6 +12,7 @@ import "react-toastify/dist/ReactToastify.css";
 // manual modules
 import "./Home.scss";
 import { useNavigate } from "react-router-dom";
+import CarouselWrapper from "../../Components/Carousel";
 
 function Home() {
   const [userEmailId, setUserEmailId] = useState("");
@@ -49,6 +50,7 @@ function Home() {
         <Possible />
         <CTA navigate={navigate} />
         <Blog navigate={navigate} />
+        <CarouselWrapper />
       </div>
       {/* //notification */}
       <ToastContainer
