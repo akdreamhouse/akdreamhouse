@@ -59,11 +59,11 @@ export const elevationImages = [
     imageType: "topView",
     imgName: "img_01",
   },
-  {
-    imageUrl: img_02,
-    imageType: "topView",
-    imgName: "img_02",
-  },
+  // {
+  //   imageUrl: img_02,
+  //   imageType: "topView",
+  //   imgName: "img_02",
+  // },
   {
     imageUrl: img_03,
     imageType: "topView",

@@ -2,11 +2,13 @@ import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from "./constants";
+import { useNavigate } from "react-router-dom";
 
 import "./style.scss";
 import { elevationImages } from "../../utils/constants/elevationImages";
 
 function CarouselWrapper() {
+  const navigate = useNavigate();
   return (
     <div className="carousel_wrapper">
       <h3 className="carousel_wrapper-heading">Elevation</h3>
@@ -34,7 +36,12 @@ function CarouselWrapper() {
         })}
       </Carousel>
       <div className="carousel_wrapper-see_more">
-        <button className="carousel_wrapper-see_more-btn">see more...</button>
+        <button
+          className="carousel_wrapper-see_more-btn"
+          onClick={() => navigate("/gallery?gallery-name")}
+        >
+          see more...
+        </button>
       </div>
     </div>
   );

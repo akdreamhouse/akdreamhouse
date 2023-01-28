@@ -2,6 +2,7 @@ import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import About from "./Pages/AboutUs/About";
 import ContactUs from "./Pages/ContactUs/ContactUs";
+import MyGallery from "./Pages/Gallery/MyGallery";
 import Home from "./Pages/Home/Home";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import PortfolioDetailPage from "./Pages/PortfolioDetailPage/PortfolioDetailPage";
@@ -30,6 +31,8 @@ function routes() {
 
       {/* contact us page */}
       <Route path="/conact-us" exact element={<ContactUs />} />
+
+      <Route path="/gallery" exact element={<MyGallery />}/>
 
       {/* default redirect page */}
       <Route path="*" element={<Navigate to="/" replace />} />
