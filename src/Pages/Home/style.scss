@@ -1,0 +1,38 @@
+.home {
+    min-height: 100vh;
+
+    &-container-carousel {
+        width: 100%;
+        height: 100vh;
+
+        #carouselExampleDark {
+            width: 100%;
+            height: 100%;
+
+            .carousel-item {
+                width: 100%;
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+            }
+
+        }
+
+        &-largeImg {
+            width: 100% !important;
+            height: 100% !important;
+            box-sizing: border-box;
+            object-fit: cover;
+            object-position: center;
+
+            @media (max-width:768px) {
+                height: 50% !important;
+                border-bottom: 3px solid rgb(125, 166, 237);
+            }
+
+            @media (max-width:576px) {
+                height: 33.33% !important;
+            }
+        }
+    }
+}

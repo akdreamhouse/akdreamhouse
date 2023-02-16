@@ -1,0 +1,136 @@
+@import "../../../../Utils/colors.scss";
+
+.HomeAbout {
+  padding: 60px 0;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+    padding-bottom: 60px;
+    margin: 0 auto;
+    width: 90%;
+    background: $backgoundBox;
+    border-radius: 7px;
+    box-shadow: $backgoundBoxShadow;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+
+    @media (max-width: 554px) {
+      padding: 25px;
+    }
+  }
+
+  &-about {
+    display: flex;
+    margin-top: 60px;
+
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    &-left {
+      width: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 40px;
+      position: relative;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 40px;
+        border-radius: 50px 2px;
+        overflow: hidden;
+      }
+
+      &-imgBox {
+        width: 80%;
+        margin-right: 20%;
+        height: 100%;
+        position: relative;
+        border-radius: 12px;
+
+        @media (max-width: 1024px) {
+          width: 100%;
+          margin-right: 0;
+        }
+      }
+
+      img {
+        box-shadow: $backgoundBoxShadow;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 4px;
+        z-index: 1;
+      }
+    }
+
+    &-right {
+      width: 50%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+
+      &-card {
+        padding: 50px;
+        color: white;
+        border-radius: 4px 50px;
+        background-color: $themeColor;
+        box-shadow: $boxShadowMedium;
+
+        @media (max-width: 554px) {
+          padding: 25px;
+        }
+
+        &-heading {
+          user-select: none;
+          font-size: 42px;
+          text-shadow: 2px 3px rgba($primaryColor, 0.2);
+          font-family: "Teko", sans-serif;
+
+          @media (max-width: 554px) {
+            font-size: 27px;
+          }
+        }
+
+        &-sub-heading {
+          font-size: 12px;
+          color: pink;
+          margin-top: -5px;
+          margin-bottom: 10px !important;
+
+          @media (max-width: 554px) {
+            font-size: 11px;
+          }
+        }
+
+        &-desc {
+          font-size: 19px;
+          text-align: justify;
+
+          @media (max-width: 554px) {
+            font-size: 15px;
+          }
+        }
+
+        &-request {
+          font-size: 14px;
+          color: pink;
+        }
+
+        .learn-more .circle{
+          background-color: rgba($primaryColor, 1);
+        }
+      }
+    }
+  }
+}

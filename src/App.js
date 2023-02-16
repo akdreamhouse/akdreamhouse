@@ -1,26 +1,16 @@
-import { useEffect } from "react";
-import { useLocation } from "react-router-dom";
-import "./App.css";
-import Footer from "./Components/Footer/Footer";
-import NavigationBar from "./Components/Navigation/NavigationBar";
-import GoogleAnalytics from "./Components/Tracking/GoogleAnalytics";
-import Mixpanel from "./Components/Tracking/Mixpanel";
+import React from "react";
 import AllRoutes from "./routes";
+import Footer from "./UI/Footer";
+import Header from "./UI/Header";
 
-function App() {
-  const { pathname } = useLocation();
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+const App = () => {
   return (
     <>
-      <NavigationBar />
+      <Header />
       <AllRoutes />
       <Footer />
-      <Mixpanel />
-      <GoogleAnalytics />
     </>
   );
-}
+};
 
 export default App;
