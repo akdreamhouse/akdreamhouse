@@ -1,0 +1,55 @@
+.ImagePopup {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  //   background-color: rgb(194, 194, 194);
+  width: 100%;
+  height: 100vh;
+  z-index: 999999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .close-icon {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    margin: 10px;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+  }
+
+  &__overlay {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    background-color: rgba(0, 3, 5, 0.892);
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .popup-img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+      animation-name: scale-img;
+      animation-duration: 0.7s;
+      animation-fill-mode: forwards;
+      
+    }
+  }
+}
+
+@keyframes scale-img {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

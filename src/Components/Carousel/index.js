@@ -1,50 +1,66 @@
-import React from "react";
+import React, { useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { responsive } from "./constants";
-import { useNavigate } from "react-router-dom";
 
 import "./style.scss";
-import { elevationImages } from "../../utils/constants/elevationImages";
+import Button from "../Button";
+import Heading from "../Heading";
+import ImagePopup from "../ImagePopup";
 
-function CarouselWrapper() {
-  const navigate = useNavigate();
+const CarouselWrapper = ({ images, title }) => {
+  const [showPopup, setShowPopup] = useState(false);
+  const [imageUrl, setImageUrl] = useState("");
+
+  const ImagePopupToggle = () => {
+    setShowPopup(!showPopup);
+  };
+
+  const setImageUrlHandlar = (e) => {
+    setImageUrl(e);
+    ImagePopupToggle();
+  };
   return (
-    <div className="carousel_wrapper">
-      <h3 className="carousel_wrapper-heading">Elevation</h3>
-      <p className="carousel_wrapper-description">
-        An Elevation is an image that shows the height, length, width and
-        appearance of a building or structure.
-      </p>
-      <Carousel
-        autoPlay={true}
-        autoPlaySpeed={2500}
-        transitionDuration={500}
-        infinite={true}
-        responsive={responsive}
-      >
-        {elevationImages.map((item) => {
-          return (
-            <div className="carousel_wrapper-inner">
-              <img
-                src={item.imageUrl}
-                alt="carausel img"
-                className="carousel_wrapper-inner-image"
-              />
-            </div>
-          );
-        })}
-      </Carousel>
-      <div className="carousel_wrapper-see_more">
-        <button
-          className="carousel_wrapper-see_more-btn"
-          onClick={() => navigate("/gallery?gallery-name")}
+    <>
+      <div className="carousel_wrapper">
+        <div className="carousel_wrapper-heading">
+          <Heading title={title} />
+          <p className="carousel_wrapper-description">
+            An Elevation is an image that shows the height, length, width and
+            appearance of a building or structure.
+          </p>
+        </div>
+        <Carousel
+          autoPlay={true}
+          autoPlaySpeed={2500}
+          transitionDuration={500}
+          infinite={true}
+          responsive={responsive}
         >
-          see more...
-        </button>
+          {images.map((item, index) => {
+            return (
+              <div className="carousel_wrapper-inner" key={index}>
+                <div className="carousel_wrapper-inner-img">
+                  <img
+                    onClick={() => setImageUrlHandlar(item.imageUrl)}
+                    src={item.imageUrl}
+                    alt="carausel img"
+                    className="carousel_wrapper-inner-image"
+                  />
+                </div>
+              </div>
+            );
+          })}
+        </Carousel>
+        <div className="carousel_wrapper-see_more">
+          <Button title="See more" />
+        </div>
+        {showPopup && (
+          <ImagePopup imgUrl={imageUrl} toggleHandlar={ImagePopupToggle} />
+        )}
       </div>
-    </div>
+    </>
   );
-}
+};
 
 export default CarouselWrapper;

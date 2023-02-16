@@ -1,34 +1,15 @@
-// color will be declare here and import to all the scss files where we want
-
+$primaryBackground: #e5e5e5;
 $white: #fff;
 $black: #000;
-$red: red;
 
-$primary-color: rgb(6, 70, 106);
+$primaryColor: #1b52de;
 
-$background-color: #fafafa;
-$shadow: 0px 3px 6px rgba($black, 0.2);
-$skyblue: skyblue;
-$gradient-text: linear-gradient(89.97deg, #9a82b5 1.84%, #f49867 102.67%);
-$gradient-text-hover: linear-gradient(89.97deg, #4c0296 1.84%, #00375a 102.67%);
 
-// button
-$button-background-color: pink;
-$button-background-color-hover: rgb(249, 133, 153);
 
-// font-family
-$font-family: "Manrope", sans-serif;
-$fw-500: 500;
-$fw-300: 300;
-$fw-700: 700;
-$fw-900: 900;
-$fw-normal: normal;
+$themeColor: #170B3B;
+$header-color: #ececf5;
 
-$gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
-$gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
 
-$color-bg: #040c18;
-$color-footer: #031b34;
-$color-blog: #042c54;
-$color-text: #81afdd;
-$color-subtext: #2a1510;
+$backgoundBox: #406cc431;
+$backgoundBoxShadow: 0px 2px 6px 0px #406cc431;
+$boxShadowMedium: 0px 2px 12px rgba(35, 0, 0, 0.267);

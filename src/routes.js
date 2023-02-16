@@ -1,43 +1,27 @@
 import React from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
-import About from "./Pages/AboutUs/About";
-import ContactUs from "./Pages/ContactUs/ContactUs";
-import MyGallery from "./Pages/Gallery/MyGallery";
-import Home from "./Pages/Home/Home";
-import Portfolio from "./Pages/Portfolio/Portfolio";
-import PortfolioDetailPage from "./Pages/PortfolioDetailPage/PortfolioDetailPage";
-import Services from "./Pages/Services/Services";
+import { Route, Routes } from "react-router-dom";
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
+import Home from "./Pages/Home";
+import Portfolio from "./Pages/Portfolio";
+import PortfolioDetails from "./Pages/PortfolioDetails";
+import Services from "./Pages/Services";
+import ServicesDetails from "./Pages/ServicesDetails";
 
-function routes() {
+const AllRoutes = () => {
   return (
-    <Routes>
-      {/* home page routes */}
-      <Route path="/" element={<Home />} />
-
-      {/* services page routes */}
-      <Route path="/services" exact element={<Services />} />
-      <Route path="/services/:service" exact element={<Services />} />
-
-      {/* portfolio page routes */}
-      <Route path="/portfolio" exact element={<Portfolio />} />
-      <Route
-        path="/portfolio/details"
-        exact
-        element={<PortfolioDetailPage />}
-      />
-
-      {/* about page  */}
-      <Route path="/about-us" exact element={<About />} />
-
-      {/* contact us page */}
-      <Route path="/conact-us" exact element={<ContactUs />} />
-
-      <Route path="/gallery" exact element={<MyGallery />}/>
-
-      {/* default redirect page */}
-      <Route path="*" element={<Navigate to="/" replace />} />
-    </Routes>
+    <>
+      <Routes>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/about_us" exact element={<AboutUs />} />
+        <Route path="/services" exact element={<Services />} />
+        <Route path="/services/:serviceName" exact element={<ServicesDetails />} />
+        <Route path="/portfolio" exact element={<Portfolio />} />
+        <Route path="/portfolio/:portfolioName" exact element={<PortfolioDetails />} />
+        <Route path="/contact_us" exact element={<ContactUs />} />
+      </Routes>
+    </>
   );
-}
+};
 
-export default routes;
+export default AllRoutes;

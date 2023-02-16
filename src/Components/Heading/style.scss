@@ -1,0 +1,63 @@
+@import "./../../Utils/colors.scss";
+
+.Heading {
+  padding: 30px 0;
+  font-family: 'Teko', sans-serif;
+
+  &-title {
+    user-select: none;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    text-align: center;
+    position: relative;
+    text-shadow: 2px 2px rgba($themeColor, 0.4);
+
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+    }
+
+    &::after {
+    content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: $themeColor;
+      margin-top: 7px;
+      top: 100%;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $themeColor;
+      position: absolute;
+      top: 90%;
+      left: -12px;
+      animation-name: move-left-right;
+      animation-duration: 4s;
+      animation-iteration-count: infinite;
+    }
+  }
+}
+
+@keyframes move-left-right {
+  0% {
+    background-color: rgba($themeColor, 1);
+    left: -10px;
+  }
+
+  50% {
+    background-color: rgba($themeColor, 1);
+    left: 100%;
+  }
+
+  100% {
+    left: -10px;
+    background-color: rgba($themeColor, 1);
+  }
+}
